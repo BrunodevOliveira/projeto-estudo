@@ -1,0 +1,11 @@
+<!--Formato um elemento dependendo de uma condição. Utilizo a property binding e caso a condição seja verdadeira ele aplica a classe: -->
+<!-- <h2 [class.maior-idade]="idade > 18">{{idade}}</h2> -->
+
+<!--Utilizo a property binding com uma Diretiva de atributo (POR ISSO N TEM *) e passo um objeto que sempre retorna um valor booleano. As duas expressões podem ser verdadeiras, se forem as duas classes serão aplicadas. A sintaxe é nome_classe:expressão booleana-->
+<h2 [ngClass]="{'maior-idade':idade > 18, 'menor-idade': idade <= 18}">{{idade}}</h2>
+
+<!--Dependendo da condição o <p> é adicionado ou removido. O * indica que isso é uma diretiva estrutural. Esse simula um if, mas temos um que simula for-->
+<p *ngIf="idade > 18">Maior de idade</p>
+<p *ngIf="idade <= 18">menor de idade</p>
+<button (click)="aumentar()">Aumentar</button>
+<button (click)="diminuir()">Diminuir</button>

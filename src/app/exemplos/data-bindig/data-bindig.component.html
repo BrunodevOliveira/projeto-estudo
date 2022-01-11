@@ -1,0 +1,36 @@
+<section>
+  <h3>Interpolação</h3>
+  <hr />
+  <p>{{nome}}</p>
+  <p>Olá eu sou o {{nome}}</p>
+  <p>Olá eu sou o {{nome}} e tenho {{idade}} anos</p>
+</section>
+
+<section>
+  <h3>Property binding</h3>
+  <hr />
+  <img [src]="link"><!--Maneira mais apropriada pois estou usando propriedades-->
+</section>
+
+<section>
+  <h3>Event binding</h3>
+  <hr />
+  <button (click)= "alerta()">Alertar</button>
+</section>
+
+<section>
+  <h3>Two-way data bindig</h3>
+  <hr />
+  <input type="text" [(ngModel)]="nomeCompleto"/>
+  <p>{{nomeCompleto}}</p>
+
+  <h4>Exemplo:</h4>
+  <!--Preencho os campos de acordo com a interface que criei e ao mesmo tempo será gerado um objeto com esses dados-->
+  <input type="text" [(ngModel)]="estudante.nomeCompleto">
+  <input type="text" [(ngModel)]="estudante.idade">
+  <input type="text" [(ngModel)]="estudante.nota1">
+  <input type="text" [(ngModel)]="estudante.nota2">
+  <input type="text" [(ngModel)]="estudante.nota3">
+  <p>{{estudante | json}}</p>
+</section>
+<hr/>
