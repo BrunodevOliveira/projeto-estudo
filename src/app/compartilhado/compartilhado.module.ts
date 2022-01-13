@@ -14,7 +14,7 @@ import { ObfsEmailPipe } from './pipes/obfs-email/obfs-email.pipe';
     ObfsEmailPipe
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   //Para utilizar fora do modulo compartilhado
   exports: [
