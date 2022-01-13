@@ -1,5 +1,9 @@
 <input type="text" placeholder="Buscar linguagem" [(ngModel)]="query">
 <!-- <p>{{linguagens | filter: "C"}}</p> -->
+<br />
+
+<input type="text" #novoValor>
+<button (click)="addLinguagem(novoValor.value)">Add linguagem</button>
 
 <ul>
   <li *ngFor="let lang of linguagens | filter: query">{{lang}}</li>
@@ -8,3 +12,5 @@
 
 <h3 *ngFor="let num of numeros | inc">{{ num }}</h3>
 <button (click)="add()">Adicionar</button>
+
+<p>{{'brunodevoliveira@gmail.com' | obfsEmail}}</p>

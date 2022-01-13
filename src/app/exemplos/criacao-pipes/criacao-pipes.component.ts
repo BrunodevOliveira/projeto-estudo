@@ -14,6 +14,11 @@ export class CriacaoPipesComponent implements OnInit {
     this.numeros.push(Math.floor(Math.random() * 10))
   }
 
+  addLinguagem(leng:string) {
+    this.linguagens.push(leng)
+    console.log(this.linguagens)
+  }
+
   query = ''
 
   linguagens = [
