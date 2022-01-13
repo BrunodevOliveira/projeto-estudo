@@ -1,0 +1,10 @@
+<input type="text" placeholder="Buscar linguagem" [(ngModel)]="query">
+<!-- <p>{{linguagens | filter: "C"}}</p> -->
+
+<ul>
+  <li *ngFor="let lang of linguagens | filter: query">{{lang}}</li>
+</ul>
+<hr />
+
+<h3 *ngFor="let num of numeros | inc">{{ num }}</h3>
+<button (click)="add()">Adicionar</button>

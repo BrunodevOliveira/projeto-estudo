@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipesComponent implements OnInit {
 
-  date = new Date()
+  date = new Date(1992,10,19)
   nome = 'Bruno oliveira'
   percentual = 0.557865
   salario = 3000
